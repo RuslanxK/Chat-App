@@ -1,4 +1,4 @@
-export const baseUrl = "https://chat-app-1-3wd3.onrender.com/api"
+export const baseUrl = process.env.SERVER_URI
 
 export const PostRequest =  async (url, body) => {
 
