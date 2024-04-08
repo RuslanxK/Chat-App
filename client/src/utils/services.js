@@ -1,6 +1,9 @@
-export const baseUrl = process.env.SERVER_URI
+
+export const baseUrl = "https://chat-app-1-3wd3.onrender.com/api"
 
 export const PostRequest =  async (url, body) => {
+
+     console.log(baseUrl)
 
    const response =  await fetch(url, {
          method: "POST",
