@@ -3,7 +3,7 @@ const { Server } = require("socket.io")
 require("dotenv").config()
 
 
-const io = new Server({ cors: process.env.SOCKET_URI});
+const io = new Server({ cors: "https://chat-app-client-0yba.onrender.com/"});
 
 let onlineUsers = []
 

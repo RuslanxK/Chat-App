@@ -21,7 +21,7 @@ export const ChatContextProvider = ({ children, user }) => {
   const [allUsers, setAllUsers] = useState([]);
 
   useEffect(() => {
-    const newSocket = io(process.env.SOCKET_URI);
+    const newSocket = io(process.env.REACT_APP_SOCKET_URI);
     setSocket(newSocket);
     return () => {
       newSocket.disconnect();
