@@ -61,6 +61,7 @@ const ChatBox = () => {
   const Messages = messages?.map((message, index) => {
     return (
       <Stack
+        sx={{position: isMobile ? "absolute" : null }}
         ref={scroll}
         display="flex"
         pb={2}
