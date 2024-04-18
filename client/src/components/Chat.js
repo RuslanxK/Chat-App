@@ -23,7 +23,7 @@ const Chat = () => {
     <Box display="flex" width="100%" justifyContent="space-between">
       <Stack
         width="400px"
-        height="90vh"
+        minHeight="90vh"
         backgroundColor="#E4E5E9"
         display="flex"
         flexDirection="row-reverse"
