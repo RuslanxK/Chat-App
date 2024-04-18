@@ -28,7 +28,7 @@ const Chat = () => {
   return (
     <Box display="flex" width="100%" justifyContent="space-between" flexDirection={ isMobile ? "column" : "row"}>
       <Stack
-        width={ isMobile ? "100vw" : "29vw"}
+        width={ isMobile ? "100%" : "29vw"}
         height="90vh"
         sx={{overflowY: "scroll"}}
         display="flex"
