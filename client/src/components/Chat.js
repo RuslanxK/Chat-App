@@ -26,13 +26,13 @@ const Chat = () => {
   });
 
   return (
-    <Box display="flex" width="100%" justifyContent="space-between">
+    <Box display="flex" width="100%" justifyContent="space-between" flexDirection={ isMobile ? "column" : "row"}>
       <Stack
-        width="29vw"
+        width={ isMobile ? "100vw" : "29vw"}
         height="90vh"
         sx={{overflowY: "scroll"}}
         display="flex"
-        flexDirection={ isMobile ? "column" : "row-reverse"}
+        flexDirection={"row-reverse"}
         justifyContent="space-between"
         alignItems="flex-start"
       >
@@ -41,7 +41,7 @@ const Chat = () => {
             Loading chats...
           </Typography>
         )}
-        <Stack width="100%" height="100%" ml={ potentialChats?.length >= 1 ? 17 : 0 }>{chats}</Stack>
+        <Stack width="100%" height="100%" ml={ potentialChats?.length >= 1 ? 16 : 0 }>{chats}</Stack>
 
         <Stack backgroundColor="#245DE6" height="90vh" position="fixed" left="0">
           <PotentialChats />

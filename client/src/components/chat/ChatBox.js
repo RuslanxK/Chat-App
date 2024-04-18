@@ -1,4 +1,4 @@
-import { Stack, Typography, Button, IconButton } from "@mui/material";
+import { Stack, Typography, Button, IconButton, useMediaQuery } from "@mui/material";
 import React, { useContext, useRef, useState, useEffect } from "react";
 import { AuthContext } from "../../context/AuthContex";
 import { ChatContext } from "../../context/ChatContext";
@@ -6,9 +6,16 @@ import { useFetchRecipientUser } from "../../hooks/useFetchRecipient";
 import moment from "moment";
 import InputEmoji from "react-input-emoji";
 import SendIcon from "@mui/icons-material/Send";
+import { useTheme } from '@mui/material/styles';
 
 const ChatBox = () => {
   const { user } = useContext(AuthContext);
+  const theme = useTheme();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+
+
   const {
     currentChat,
     messages,
@@ -92,7 +99,7 @@ const ChatBox = () => {
 
   return (
     <Stack
-      width="71vw"
+      width={ isMobile ?  "100vw" : "71vw"}
       minHeight="90vh"
       borderLeft=" 1px solid #c9c7c7"
       display="flex"
