@@ -1,15 +1,21 @@
 import React, { Fragment, useContext } from "react";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography, useMediaQuery} from "@mui/material";
 import { ChatContext } from "../context/ChatContext";
 import { AuthContext } from "../context/AuthContex";
 import UserChat from "./chat/UserChat";
 import PotentialChats from "./chat/PotentialChats";
 import ChatBox from "./chat/ChatBox";
+import { useTheme } from '@mui/material/styles';
+
 
 const Chat = () => {
   const { userChats, isUserChatsLoading, userChatsError, updateCurrentChat, potentialChats } = useContext(ChatContext);
 
   const { user } = useContext(AuthContext);
+  const theme = useTheme();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
 
   const chats = userChats?.map((chat, index) => {
     return (
@@ -26,7 +32,7 @@ const Chat = () => {
         height="90vh"
         sx={{overflowY: "scroll"}}
         display="flex"
-        flexDirection="row-reverse"
+        flexDirection={ isMobile ? "column" : "row-reverse"}
         justifyContent="space-between"
         alignItems="flex-start"
       >
