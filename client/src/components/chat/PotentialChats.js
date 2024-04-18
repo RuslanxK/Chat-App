@@ -23,20 +23,20 @@ const PotentialChats = () => {
         flexDirection="row"
         justifyContent="center"
         alignItems="center"
-        backgroundColor="#7C70F1"
+        backgroundColor="white"
         borderRadius="7px"
         onClick={() => createChat(user._id, u._id)}
         key={index}
       >
         {" "}
-        <img src={avatar} alt="avatar" height="28px" width="28px" />
+        <img src={avatar} alt="avatar" height="28px" width="27px" />
         <Typography
           variant="span"
           component="span"
-          fontSize="15px"
+          fontSize="14px"
           pl={1}
           pr={1}
-          color="white"
+          color="black"
         >
           {u.name}
         </Typography>{" "}

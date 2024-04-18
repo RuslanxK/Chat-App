@@ -13,18 +13,19 @@ const NavBar = () => {
     <Container
       maxWidth
       sx={{
-        background: "black",
+        background: "white",
         height: "10vh",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
+        boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px;"
       }}
     >
-      <Typography component="h1" variant="h4" color="white">
+      <Typography component="h1" variant="h4" color="black">
         <img src="./logo.png" alt="logo" width="35px" height="35px" />
       </Typography>
       {user ? (
-        <Typography component="span" variant="span" color="white">
+        <Typography component="span" variant="span" color="black">
           Logged in as {user?.name}
         </Typography>
       ) : null}
@@ -32,7 +33,7 @@ const NavBar = () => {
         {user ? <Notifications /> : null}
         {user ? (
           <Button
-            sx={{ marginRight: "8px", color: "white" }}
+            sx={{ marginRight: "8px", color: "black" }}
             variant="text"
             onClick={logoutUser}
           >

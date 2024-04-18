@@ -37,6 +37,9 @@ const UserChat = ({ chat, user }) => {
 
   return (
     <Stack
+      backgroundColor="white"
+      sx={{ background: 'white','&:hover':{ background: "#cbd9f5"} }}
+      m={1}
       p={2}
       onClick={() => {
         if (thisUserNotifications?.length !== 0) {
@@ -59,7 +62,7 @@ const UserChat = ({ chat, user }) => {
         >
           <img src={avatar} alt="avatar" height="37px" width="37px" />
           <Stack ml={1}>
-            <Typography component="span" variant="span" color="white" mb={0.5}>
+            <Typography component="span" variant="span" color="black" mb={0.5} fontSize="14px">
               {recipientUser?.user?.name}
             </Typography>
             <Stack color="gray">
@@ -76,7 +79,7 @@ const UserChat = ({ chat, user }) => {
             borderRadius="100px"
             mb={0.5}
           ></Stack>
-          <Typography component="span" variant="span" color="gray" mb={0.5}>
+          <Typography component="span" variant="span" color="gray" mb={0.5} fontSize="14px">
             {moment(latestMessage?.createdAt).calendar()}
           </Typography>
           {thisUserNotifications?.length > 0 ? (

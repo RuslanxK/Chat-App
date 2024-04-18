@@ -27,9 +27,8 @@ const App = () => {
           justifyContent: "center",
           alignItems: "center",
           height: "90vh",
-          backgroundColor: "#2d2d2d",
-          backgroundImage:
-            "linear-gradient(319deg, #2d2d2d 0%, #2d2d2d 37%, #2d2d2d 100%)",
+          backgroundColor: "#E4E5E9"
+          
         }}
       >
         <Routes>

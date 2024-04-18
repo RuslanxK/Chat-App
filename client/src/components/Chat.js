@@ -24,7 +24,7 @@ const Chat = () => {
       <Stack
         width="400px"
         height="90vh"
-        backgroundColor="#1a1919"
+        backgroundColor="#E4E5E9"
         display="flex"
         flexDirection="row-reverse"
         justifyContent="space-between"
@@ -36,7 +36,7 @@ const Chat = () => {
         )}
         <Stack width="100%">{chats}</Stack>
 
-        <Stack backgroundColor="#192230">
+        <Stack backgroundColor="#245DE6">
           <PotentialChats />
         </Stack>
         {userChatsError && (

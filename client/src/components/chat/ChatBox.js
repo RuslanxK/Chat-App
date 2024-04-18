@@ -69,10 +69,10 @@ const ChatBox = () => {
           borderRadius="5px"
           key={index}
           backgroundColor={
-            message?.senderId === user?._id ? "#7C70F1" : "#3A2120"
+            message?.senderId === user?._id ? "#245DE6" : "white"
           }
           width="fit-content"
-          color="white"
+          color={message?.senderId === user?._id ? "white" : "black"}
         >
           <Typography component="span" variant="span" mb={0.5}>
             {message.text}
@@ -80,7 +80,7 @@ const ChatBox = () => {
           <Typography
             component="span"
             variant="span"
-            color="#e0e0e0"
+            color={message?.senderId === user?._id ? "#e3e1e1" : "gray"}
             fontSize="12px"
           >
             {moment(message.createdAt).calendar()}
@@ -94,10 +94,10 @@ const ChatBox = () => {
     <Stack
       width="1140px"
       height="90vh"
-      borderRadius="7px"
+      borderLeft=" 1px solid #c9c7c7"
       display="flex"
       justifyContent="space-between"
-      backgroundColor="#4F2E2C"
+      backgroundColor="#E4E5E9"
     >
       <Stack
         p={1}
@@ -105,7 +105,7 @@ const ChatBox = () => {
         flexDirection="row"
         justifyContent="flex-start"
         alignItems="center"
-        color="white"
+        color="black"
         pl={6}
         pt={3}
         sx={{ borderTopLeftRadius: "7px", borderTopRightRadius: "7px" }}
@@ -139,7 +139,7 @@ const ChatBox = () => {
             sendTextMessage(textMessage, user, currentChat._id, setTextMessage)
           }
         >
-          <SendIcon sx={{ fill: "white" }} />
+          <SendIcon sx={{ fill: "white", background: "#245DE6", padding: "8px", borderRadius: "5px" }} />
         </IconButton>
       </Stack>
     </Stack>

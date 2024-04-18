@@ -23,7 +23,7 @@ const Notifications = () => {
   return (
     <Stack>
       <IconButton onClick={() => setIsOpen(!isOpen)}>
-        <ChatBubbleIcon style={{ fill: "white" }} />
+        <ChatBubbleIcon style={{ fill: "#245DE6" }} />
         {unreadNotifications?.length === 0 ? null : (
           <Stack
             color="white"
