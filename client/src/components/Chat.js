@@ -7,7 +7,7 @@ import PotentialChats from "./chat/PotentialChats";
 import ChatBox from "./chat/ChatBox";
 
 const Chat = () => {
-  const { userChats, isUserChatsLoading, userChatsError, updateCurrentChat } = useContext(ChatContext);
+  const { userChats, isUserChatsLoading, userChatsError, updateCurrentChat, potentialChats } = useContext(ChatContext);
 
   const { user } = useContext(AuthContext);
 
@@ -22,21 +22,22 @@ const Chat = () => {
   return (
     <Box display="flex" width="100%" justifyContent="space-between">
       <Stack
-        width="400px"
-        minHeight="90vh"
-        backgroundColor="#E4E5E9"
+        width="29vw"
+        height="90vh"
+        sx={{overflowY: "scroll"}}
         display="flex"
         flexDirection="row-reverse"
         justifyContent="space-between"
+        alignItems="flex-start"
       >
         {isUserChatsLoading && (
           <Typography variant="span" component="span">
             Loading chats...
           </Typography>
         )}
-        <Stack width="100%">{chats}</Stack>
+        <Stack width="100%" height="100%" ml={ potentialChats?.length >= 1 ? 17 : 0 }>{chats}</Stack>
 
-        <Stack backgroundColor="#245DE6">
+        <Stack backgroundColor="#245DE6" height="90vh" position="fixed" left="0">
           <PotentialChats />
         </Stack>
         {userChatsError && (

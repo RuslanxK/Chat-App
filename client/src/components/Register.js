@@ -32,6 +32,7 @@ const Register = () => {
           type="text"
           label="name"
           required
+          inputProps={{ maxLength: 7 }}
           name="name"
           sx={{ marginTop: "25px" }}
           onChange={(e) =>

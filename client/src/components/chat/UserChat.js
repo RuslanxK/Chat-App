@@ -40,7 +40,7 @@ const UserChat = ({ chat, user }) => {
       backgroundColor="white"
       sx={{ background: 'white','&:hover':{ background: "#cbd9f5"} }}
       m={1}
-      p={2}
+      p={1}
       onClick={() => {
         if (thisUserNotifications?.length !== 0) {
           markThisUserNotificationAsRead(thisUserNotifications, notifications);

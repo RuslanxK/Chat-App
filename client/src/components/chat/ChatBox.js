@@ -92,8 +92,8 @@ const ChatBox = () => {
 
   return (
     <Stack
-      width="1140px"
-      height="90vh"
+      width="71vw"
+      minHeight="90vh"
       borderLeft=" 1px solid #c9c7c7"
       display="flex"
       justifyContent="space-between"
@@ -107,7 +107,6 @@ const ChatBox = () => {
         alignItems="center"
         color="black"
         pl={6}
-        pt={3}
         sx={{ borderTopLeftRadius: "7px", borderTopRightRadius: "7px" }}
       >
         {recipientUser?.user?.name}
