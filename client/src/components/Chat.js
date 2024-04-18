@@ -43,7 +43,7 @@ const Chat = () => {
         )}
         <Stack width="100%" height="100%" p={isMobile ? 2 : null} ml={ potentialChats?.length >= 1 ? 16 : 0 }>{chats}</Stack>
 
-        <Stack backgroundColor="#245DE6" height="90vh" position="fixed" left="0">
+        <Stack backgroundColor="#245DE6" height="90vh" position={ isMobile ? null : "fixed"} left="0">
           <PotentialChats />
         </Stack>
         {userChatsError && (
