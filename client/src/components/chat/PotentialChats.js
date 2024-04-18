@@ -16,8 +16,6 @@ const PotentialChats = () => {
         mr={1}
         pl={1}
         pr={1}
-        pt={0.5}
-        pb={0.5}
         sx={{ cursor: "pointer" }}
         display="flex"
         flexDirection="row"
